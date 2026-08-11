@@ -19,24 +19,20 @@ public class GameController : MonoBehaviour
     {
         checkActual = 0;
         vueltaActual = 0;
-        checkPoints = GameObject.FindGameObjectsWithTag("Check");
-        System.Array.Resize(ref checkScript, checkPoints.Length);
+        //checkPoints = GameObject.FindGameObjectsWithTag("Check");
+        //System.Array.Resize(ref checkScript, checkPoints.Length);
 
-        int j = 0;
-         for (int i = checkPoints.Length-1; i > -1; i--) 
-        {
-                checkScript[j] = checkPoints[i].GetComponent<CheckPoint>();
-                checkScript[j].index = j;
-                j++;
-        }
+        //int j = 0;
+        // for (int i = checkPoints.Length-1; i > -1; i--) 
+        //{
+        //        checkScript[j] = checkPoints[i].GetComponent<CheckPoint>();
+        //        checkScript[j].index = j;
+        //        j++;
+        //}
 
 
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
