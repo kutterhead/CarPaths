@@ -16,10 +16,7 @@ using UnityEngine.UI;
 
 public class PrometeoCarController : MonoBehaviour
 {
-    //lights
-      
     //CAR SETUP
-
       [Space(20)]
       //[Header("CAR SETUP")]
       [Space(10)]
@@ -47,6 +44,11 @@ public class PrometeoCarController : MonoBehaviour
                                      // however, you must notice that the higher this value is, the more unstable the car becomes.
                                      // Usually the y value goes from 0 to 1.5.
 
+    //LIGHTS
+
+    [Space(10)]
+    public LightEffects objetoLuces;
+
     //WHEELS
 
     //[Header("WHEELS")]
@@ -56,8 +58,6 @@ public class PrometeoCarController : MonoBehaviour
     collider components of the wheels. The wheel collider components and 3D meshes of the wheels cannot come from the same
     game object; they must be separate game objects.
     */
-    [Space(10)]
-    public GameObject objetoLuces;
     [Space(10)]
     public GameObject frontLeftMesh;
       public WheelCollider frontLeftCollider;
@@ -317,11 +317,14 @@ public class PrometeoCarController : MonoBehaviour
           CancelInvoke("DecelerateCar");
           deceleratingCar = false;
           Handbrake();
+                
         }
         if(!handbrakePTI.buttonPressed){
           RecoverTraction();
-        }
-        if((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)){
+               
+
+            }
+            if ((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)){
           ThrottleOff();
         }
         if((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar){

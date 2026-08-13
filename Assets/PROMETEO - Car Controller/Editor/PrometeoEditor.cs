@@ -27,6 +27,12 @@ public class PrometeoEditor : Editor{
   private SerializedProperty bodyMassCenter;
   //
   //
+  //LIGHTS VARIABLES
+  //
+  //
+  private SerializedProperty objetoLuces;
+  //
+  //
   //WHEELS VARIABLES
   //
   //
@@ -89,6 +95,8 @@ public class PrometeoEditor : Editor{
     handbrakeDriftMultiplier = SO.FindProperty("handbrakeDriftMultiplier");
     bodyMassCenter = SO.FindProperty("bodyMassCenter");
 
+    objetoLuces = SO.FindProperty("objetoLuces");
+
     frontLeftMesh = SO.FindProperty("frontLeftMesh");
     frontLeftCollider = SO.FindProperty("frontLeftCollider");
     frontRightMesh = SO.FindProperty("frontRightMesh");
@@ -142,6 +150,18 @@ public class PrometeoEditor : Editor{
     decelerationMultiplier.intValue = EditorGUILayout.IntSlider("Deceleration Multiplier:", decelerationMultiplier.intValue, 1, 10);
     handbrakeDriftMultiplier.intValue = EditorGUILayout.IntSlider("Drift Multiplier:", handbrakeDriftMultiplier.intValue, 1, 10);
     EditorGUILayout.PropertyField(bodyMassCenter, new GUIContent("Mass Center of Car: "));
+
+    //
+    //
+    //LIGHTS
+    //
+    //
+
+    GUILayout.Space(25);
+    GUILayout.Label("LIGHTS", EditorStyles.boldLabel);
+    GUILayout.Space(10);
+
+    EditorGUILayout.PropertyField(objetoLuces, new GUIContent("Light Effects: "));
 
     //
     //

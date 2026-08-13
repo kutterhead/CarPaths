@@ -9868,7 +9868,7 @@ MonoBehaviour:
   decelerationMultiplier: 1
   handbrakeDriftMultiplier: 5
   bodyMassCenter: {x: 0, y: 0, z: 0}
-  objetoLuces: {fileID: 114944249822252698}
+  objetoLuces: {fileID: 0}
   frontLeftMesh: {fileID: 8948458998295562082}
   frontLeftCollider: {fileID: 1962544395171844223}
   frontRightMesh: {fileID: 3086656792176188069}
@@ -20837,7 +20837,6 @@ MonoBehaviour:
   checkActual: 0
   vueltas: 0
   nodos: 0
-  pcc: {fileID: 0}
 --- !u!33 &4935417524913923105
 MeshFilter:
   m_ObjectHideFlags: 0

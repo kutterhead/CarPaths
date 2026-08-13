@@ -7,6 +7,8 @@ public class CollissionControl : MonoBehaviour
     public int checkActual;
     public int vueltas;
     public int nodos = 0;
+
+    public PrometeoCarController pcc;
     void Start()
     {
         checkActual = -1;
@@ -36,5 +38,10 @@ public class CollissionControl : MonoBehaviour
 
             }
         }
+        //Debug.Log(pcc.carSpeed);
+        // (pcc.carSpeed>3)
+        //{
+
+        //}
     }
 }
